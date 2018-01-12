@@ -1,0 +1,9 @@
+
+WITH cte AS 
+(
+  SELECT *,
+     row_number() OVER(PARTITION BY column1, column2 ORDER BY Date desc) AS Rnk
+  FROM table 
+  WHERE Date ='2017-01-04'
+)
+DELETE FROM cte WHERE Rnk > 1 
