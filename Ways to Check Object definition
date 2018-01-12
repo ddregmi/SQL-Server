@@ -1,0 +1,6 @@
+select ROUTINE_DEFINITION, * from INFORMATION_SCHEMA.ROUTINES
+where ROUTINE_DEFINITION like '%what you want to serch from proc?%'
+
+
+select DEFINITION, * from sys.sql_modules
+where DEFINITION like '%what you want to serch from proc?%'
